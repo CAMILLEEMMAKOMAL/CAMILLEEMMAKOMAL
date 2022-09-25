@@ -1,0 +1,628 @@
+body {
+    font-family:'Raleway', sans-serif;/* de la police d'ecriture */
+    color:#000000;
+   /* regler la taille des polices */
+}
+
+*, *:before, *:after {
+    box-sizing: border-box; /* Opera/IE 8+ */
+    -moz-box-sizing: border-box; /* Firefox, autres Gecko */
+    -webkit-box-sizing: border-box; /* Safari/Chrome, autres WebKit */
+    margin: 0;
+    padding: 0;
+  }
+
+
+/* VERSION DESKTOP */
+
+a{
+     text-decoration: none; 
+    color:#000000; /* hébergement et activité sont en noir */
+       
+}
+
+img{
+    object-fit: cover;
+}
+
+/*main*/
+
+main{
+    margin-left:0;
+    margin-right:0;
+    padding-left:0;
+    padding-right:0;
+    margin: 0 50px;
+
+}
+
+
+/*header */ /* la parti logi, hebergement et avtivité*/
+header{
+    
+    display:flex;
+    justify-content: space-between;/*pour espace entre les elements */
+    align-items: center; /*pour aligner les element *//* a revoir avec ( height: 118px;) dans cette partir */
+    margin: 0 50px;
+    height: 118px;
+}
+
+#logo{/* le logo booki*/
+    width: 130px;
+    margin-left:16px;
+}
+ 
+
+ /*nav *//* cest la perti hebergement et activite en haut de la page */
+
+.nav{
+    display: flex;
+    margin: 25px 0px 15px 0px;
+    width:100%;
+    text-align:center;
+    
+}
+
+.nav-menu{
+    padding: 10px 51px;
+    border-top: 4px solid #ffffff;
+    
+  
+}
+
+.nav-menu:hover {
+    border-top: 4px solid #0065fc;/* survole de la souris avec une bars bleu au-dessus de hébergement et activité */
+    padding: 10px 51px;  
+    color:#0065fc;/* la couleur de hébergement et activité*/
+   
+}
+
+
+/*section rechercher*/
+.rechercher h1{
+    font-size: 22px;
+}
+
+::-webkit-input-placeholder {  color:#000000; opacity: 1; }
+::-moz-placeholder {  color:#000000; opacity: 1;}
+input:-moz-placeholder {  color:#000000; opacity: 1;} 
+/*pour que la couleur noire s'affiche dans Chrome et Firefox*/
+
+
+
+.contour-recherche{/*contour  du boutton recherche ajustement avec l'icone lieu*/
+    display: flex;
+    margin-top: 20px;  /* deplacement haut bas de l ensemble de la bar rechercher*/
+}
+
+.icone-rechercher {  /* pour enlever la loupe de la bar de rechercher*/
+    display:none;
+}
+
+.localisation{ /*icons map*/
+ 
+    width: 45px; /* agrandir  vers la droite */
+    height: 45px;
+    color: #000000;
+    background-color: #F2F2F2;
+    border: 1px #F2F2F2 solid;
+    padding: 13px;
+    border-radius: 15px 0px 0px 15px;
+    text-align: center;
+    font-size: 16px;
+    
+}
+
+.destination-lieu{
+    border: 1px #F2F2F2 solid;  /* bordure encadrement destination lieu*/
+    font-size: 16px;
+    font-weight:bold;
+    width: 230px; /* longueur du rectangle  destination lieu*/
+    text-indent: 10px; /* longueur de l'espace  avant le debut du texte ( décale le texte Marseille , france vers la droite ) */
+}
+
+
+
+.recherche {
+    border-radius: 0 15px 15px 0;
+    background:#0065fc;/* pour donner la couleuer bleu au recherche*/
+    color: #ffff;
+    border-style: none;
+    font-weight: bold;
+    width: 130px; /* la longeur de la bordure de rechercher*/
+    font-size: 16px;
+}
+
+/*section filtres*/
+.filtres{
+    display: flex;
+    flex-wrap:wrap;/*indique si element dois etre disposes sur une seul ligne ou sur plusieur ligne automatique */
+    align-items: center;/* qui gère le positionnement du contenu dans un bandeau de container flexible*/
+    margin: 18px 0px; /* espace entre filtres le moteur de recherche */
+    
+    gap: 25px;/* gap est un raccourci qui permet a la fois l'esplacement minimum qui sépare chaque linge et chaque colonne */
+
+}
+
+.filtres h2{
+    font-weight: bold;
+    font-size: 18px;/* la taille de filters sest retréci*/
+}
+
+.filtres ul {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 17px;/* gap est un raccourci qui permet de spécifier a la fois l'esplacement minimum qui sépare chaque ligne et chaque colonne */
+}
+
+.filtres li {
+    display: flex;
+    align-items: center;
+    border: 2px solid #d9d9d9;/*pour rendre la bordure plus épaise */
+    border-radius: 100px;
+    border-left: #DEEBFF;  
+   
+}
+   
+.filtres a {
+    font-size: 18px;
+    font-weight: bold;
+    color:#000000; 
+    padding: 0px 12px; 
+}
+
+.filtres li:hover {/*pour la couleur bleu dans les button*/
+    background-color: #DEEBFF;
+}
+
+.blue-icon {
+    color: #0065fc;/* couleur de l'intérieur du symbole*/
+    background-color: #DEEBFF;
+    border-radius: 100px 100px 100px 100px;/*pour arrondir les bordure des icons*/
+    width: 45px; /*agrandir en largeur des bouttons filtres*/ 
+    height: 45px;/* la taile de menu des icons de filtres*/
+    text-align: center;
+    line-height: 2.4 !important; /*pour aligner les icons*/
+    /*line-height indique la hauteur minimale des lignes au sein de l'élement*/
+    font-size: 20px;
+    
+}
+
+
+/* Info */
+.info {
+    display: flex;
+    align-items:center; 
+    
+}
+
+.fa-info { /*icon info*/
+    width: 25px;
+    height: 25px;
+    color: #0065fc;
+    border-radius: 100%;
+    border: 1px solid #d9d9d9;
+    padding: 5px 8px;/*qui permet de raccourcie le écarts de remplissage sur les quatre côte d'un élement*/
+    font-size: 11px;
+    text-align: center; /* pour aligner le logo "i" au centre */
+}
+
+.info p {
+    margin-left: 15px;
+}
+   
+/* section hébergements */
+
+#Hébergements {/*HEBERGEMENT à MARSEILLE */
+    margin-top:30px;/* la marger enter la localisation et hebre à marseille */
+    display: flex;
+    gap: 45px;
+   
+}
+.hébergements_Marseille{
+    background-color: #F2F2F2;/* la couleur gris clair du font de la photo */
+    display:flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    border-radius: 20px;
+    width: 67%;/* l' encadrement gris du font derrière les image hébergement à marseille */
+    padding: 40px;/* pour bien centre l' element */
+    
+    
+}
+.carte_hébergement_Marseille{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 30px;
+    padding: 30px 0px 50px 0px;
+}
+
+.carte_hotel{
+    min-width: 200px;
+    width: 30%;/*  la largeur des images dans hébergement à marseille*/
+    height: 200px;
+    background-color:  #ffff;
+    border: 4px solid #ffff;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px #dfdfdf;
+    line-height: 1.5px;/* pour que le text sois bien dans l 'encadrement*/
+} 
+
+.carte_hotel img {  /* pour modifier les taille des image dans marseille carre*/
+    width: 100%;
+    height:110px;
+    border-radius: 15px 15px 0 0;
+}
+
+
+.carte_body_hotel{/* réglage pour le text */
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+
+
+h3{
+  
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    padding-top: 20px;
+   
+}
+
+.paragraphe{
+    display: flex;
+    padding-top: 20px;
+
+}
+
+.carte_body_hotel p .carte_populaires_hotels p { 
+    font-size: 14px;/* pour le monment pas de changement avec */
+  
+}
+
+.afficher_plus{
+    text-decoration: none;
+    color:#000000;
+    font-size: 18px;
+    font-weight: bold;
+    
+}
+
+.full {/*étoile*/
+    color:#0065fc;
+    font-size: 12px;
+}
+
+.empty {/*étoile*/
+    color: #d9d9d9;
+    font-size: 12px;
+    
+}
+
+.star_rating_M{
+    
+    display: flex;
+    padding-top: 20px; /* pour mettre létoile vers le bas */
+  
+ }
+
+ .carte_one:hover,.carte_group_1:hover,.carte_group_2:hover,.carte_group_3:hover,.carte_group_4:hover,.carte_hotel:hover,.carte_populaires_hotels:hover {
+    transform: scale(1.03); /* sur vol de la souris sur les photos tranparentes côte hébergement et populaires  */
+ }
+
+/*les plus populaire*/
+ .populaires{
+    background-color: #F2F2F2;/* couleur du font gris des images */
+    display:flex;
+    flex-direction: column;
+    border-radius: 20px;
+    width: 33%;/* centre l'image */
+    min-width: 350px;/* largeur min du fond gris populaire */
+    padding: 40px 40px 0px 40px;/* pour donner la larguer et la haute du fond girs */
+ }
+
+ .populaires h2 { 
+    display: flex;
+    justify-content: space-between;/* l espasce entre les plus populaire et étoile */
+    font-size: 22px;
+    align-items: center;
+   
+}
+
+.carte_populaires {
+    display:flex;
+    flex-direction:column;
+    padding-top: 30px;
+    row-gap:12px; /* permet de spécifier l 'espace minimal qui sépare chaque linge au sein d'un containier*/
+}
+
+.carte_populaires_hotels {
+    min-width: 280px;/* largeur de l encadrement de l image populiares */
+    height: 150px;
+    background-color:  #ffff;
+    border: 5px solid #ffff;/*bordure cadrement img*/
+    border-radius: 20px;
+    margin-bottom:25px; 
+    box-shadow: 1px 1px 10px #dfdfdf;/* couleur des bordure de boite img*/
+   
+}
+
+.carte_populaires_hotels a {/* côte photos populaires*/
+    display: flex;
+    height:100%;/*pour monter la photos vers le haut*/
+    
+}
+
+
+
+.carte_body_populaires_hotels {/* modification texte*/
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 5px;/* gap est un raccourci qui permet a la fois l'esplacement minimum qui sépare chaque linge et chaque colonne */
+   
+}
+
+.carte_populaires img { /*modification img populaires */
+    width: 40%;/* la largeur de l'image mini populaires */
+    border-radius: 15px 0 0 15px ;/* bordure pour les img*/
+    flex-shrink:0;
+    
+}
+
+.star_rating_P {
+    display: flex;
+    padding-top: 10px;
+
+}
+
+
+/* Activité à Marseille */
+#activités {
+   padding-top: 50px;
+
+}
+    
+
+.carte_activités{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;  
+    margin-top:30px;
+     
+}
+
+.carte_activités h3 {
+    padding: 6%;  
+   
+}
+
+.carte_activités img {
+    width:100%; /* la largeur des imge marseille*/
+    border-radius: 25px 25px 0px 0px;
+    box-shadow: 1px 1px 10px #dfdfdf;
+    
+
+}
+
+.carte_one { /*premiere colonne bloc activite marseille*/
+    width:23% ;/* largeur du font des column gris */
+    background-color:  rgb(255, 255, 255);
+    box-shadow: 1px 1px 10px #dfdfdf;
+    border-radius: 25px 25px 25px 25px; 
+   
+     
+}
+
+.carte_group { /* marseille carte img*/
+    width:23%;/* la largeur de l image entre les column 2 et 4 marseille */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+   
+
+}
+
+.carte_group_1,.carte_group_2,.carte_group_3,.carte_group_4 {/* bordure pour tout les block img */
+    background-color:  rgb(255, 255, 255);
+    box-shadow: 1px 1px 10px #dfdfdf;
+    border-radius: 25px 25px 25px 25px; 
+    
+    
+}
+
+
+.carte_one img {/* column img 1 et 4 marseille*/
+ height: 380px; /* la longeur de l image de vieux port et parc ndc */
+
+}
+ 
+/* font backgrud blance activité à marseille */
+.carte_group_1 img{  /* fort de pomègues*/
+  height: 180px;
+
+}
+
+.carte_group_2 img{ /*île deu Frioul*/
+    height: 100px;
+   
+}
+
+.carte_group_3 img{/* Notre-Dame -de -le Garde*/
+    height: 130px;
+    
+}
+
+.carte_group_4 img{/* Parc Longchamp*/
+    height: 140px;
+
+}
+
+/* FOOTER */
+footer {
+    margin-top:40px;
+    display: flex;
+    background: #F2F2F2;
+    padding:45px; 
+    gap: 220px;  
+   
+}
+
+footer h2 {
+   
+    font-size:18px;
+    margin-left: 20px;
+    margin-bottom: 5%;/* pour laisser un espace entre le h2 et le li footer*/
+    
+}
+
+footer li {
+    font-size: 15.5px; 
+    list-style: none;
+    padding-top: 8px;
+    margin-left: 20px; /* pour centre le li vers le h2 car il y avait un decalager avec le text*/
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+    header {
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        margin: 0;
+    }
+    
+    #logo {
+        margin:25px 0px 0px 45px;
+        
+    }
+
+    nav {
+        display: flex;
+        margin: 25px 0px 15px 0px;
+        width:100%;
+        text-align:center;
+    }
+    
+    .nav-menu{
+        padding: 10px 51px;
+        border-bottom: 4px solid #F2F2F2;/* couleur gris du border sous hebergement et activité */
+        width: 50%;
+    }
+    
+    .nav-menu:hover {
+        border-top: none;
+        border-bottom: 4px solid #0065fc;
+        padding: 10px 51px;  
+        transition-duration: 0.5s;/* pour que la bars bleu qui se trouve au dessus de l hebergement se touve en dessous e rétrécissant la page dan media MEDIA QUERIES */
+    }
+
+    .recherche {
+        display:none;
+    }
+
+    .icone-rechercher {
+        display:block;
+        border-radius: 13px 13px 13px 13px;
+        background:#0065fc;
+        color: #ffff;
+        border-style: none;
+        font-weight: bold;
+        min-width: 50px;
+        font-size: 18px;
+        margin-left: -20px;
+    }
+
+    #Hébergements {/*HEBERGEMENT à MARSEILLE */
+        flex-direction: column-reverse;
+        gap: 25px;  
+    }
+
+    main {
+        margin: 0;
+    }
+
+    .rechercher,.filtres,.info{
+        margin: 20px;
+
+    }
+
+    #activités{
+        margin: 0 12px;
+    }
+
+    .populaires{
+        background-color: #F2F2F2;
+        border-radius: 0px;
+        width: 100%;
+        padding: 40px 15px 0px 12px;
+      
+    }
+   
+
+    .hébergements_Marseille {
+        background-color: #ffff;
+        border-radius: 0px;
+        width: 100%;
+        padding:12px;
+    }
+
+    .carte_hotel {
+        width: 100%;
+    }
+
+    .carte_activités {
+        display:flex;
+        flex-direction: column; 
+        gap:30px;
+    }
+
+    .carte_one, .carte_group {
+        width: 100%;
+    }
+
+    .carte_group {
+        gap: 30px;
+    }
+    
+    .carte_one img, .carte_group_1 img, .carte_group_2 img {
+        height: 150px;
+    }
+
+    .carte_populaires {
+        row-gap:0;
+    }
+
+    .carte_hébergement_Marseille {
+        gap:25px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 40px 20px;     
+      }
+  
+    footer h2 {
+          margin-bottom: 5px;   
+      }
+}
+
+@media screen and (max-width: 992px) and (min-width: 769px){ 
+    footer {
+        gap: 100px;
+    }
+}
+
+   
+
+
+
